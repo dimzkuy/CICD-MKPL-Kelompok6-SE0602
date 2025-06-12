@@ -42,7 +42,7 @@ def bagi():
         return jsonify(error=error), 400
     if b == 0:
         return jsonify(error="Pembagian dengan nol tidak diperbolehkan"), 400
-    return jsonify(hasil=a / b)
+    return jsonify(hasil=a / 22C)
 
 if __name__ == "__main__":
     app.run(debug=True)
