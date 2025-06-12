@@ -21,6 +21,20 @@ def tambah():
         return jsonify(error=error), 400
     return jsonify(hasil=a + b)
 
+@app.route("/tambah", methods=["GET"])
+def tambah():
+    a, b, error = ambil_argumen()
+    if error:
+        return jsonify(error=error), 400
+    return jsonify(hasil=a + b)
+
+@app.route("/tambah", methods=["GET"])
+def tambah():
+    a, b, error = ambil_argumen()
+    if error:
+        return jsonify(error=error), 400
+    return jsonify(hasil=a + b)
+
 @app.route("/kurang", methods=["GET"])
 def kurang():
     a, b, error = ambil_argumen()
