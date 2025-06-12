@@ -43,3 +43,15 @@ jobs:
       with:
         name: coverage-report
         path: coverage.xml
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      with:
+          args: >
+            -Dsonar.organization=dimzkuy
+            -Dsonar.projectKey=dimzkuy_CICD-MKPL-Kelompok6
+            -Dsonar.sources=src
+            -Dsonar.tests=src/tests
+            -Dsonar.python.coverage.reportPaths=coverage.xml
+            -Dsonar.sourceEncoding=UTF-8
+      env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
