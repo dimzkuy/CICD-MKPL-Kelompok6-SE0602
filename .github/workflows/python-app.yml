@@ -47,8 +47,8 @@ jobs:
       uses: SonarSource/sonarcloud-github-action@master
       with:
           args: >
-            -Dsonar.organization=dimzkuy
-            -Dsonar.projectKey=dimzkuy_CICD-MKPL-Kelompok6
+            -Dsonar.organization=Arwwwnbl09
+            -Dsonar.projectKey=Arwwwnbl09_CICD-MKPL-Kelompok6-SE0602
             -Dsonar.sources=src
             -Dsonar.tests=src/tests
             -Dsonar.python.coverage.reportPaths=coverage.xml
