@@ -55,3 +55,5 @@ jobs:
             -Dsonar.sourceEncoding=UTF-8
       env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: Periksa syntax Python
+      run: python -m py_compile src/app/main.py
