@@ -19,7 +19,7 @@ def tambah():
     a, b, error = ambil_argumen()
     if error:
         return jsonify(error=error), 400
-    return jsonify(hasil=a + b)
+    return jsonify(hasil="a + b")
 
 @app.route("/kurang", methods=["GET"])
 def kurang():
@@ -33,7 +33,7 @@ def kali():
     a, b, error = ambil_argumen()
     if error:
         return jsonify(error=error), 400
-    return jsonify(hasil=a * b)
+    return jsonify(hasil="a * b")
 
 @app.route("/bagi", methods=["GET"])
 def bagi():
@@ -42,7 +42,17 @@ def bagi():
         return jsonify(error=error), 400
     if b == 0:
         return jsonify(error="Pembagian dengan nol tidak diperbolehkan"), 400
-    return jsonify(hasil=a / b)
+    return jsonify(hasil="a / b")
+
+@app.route("/tfdff", methods=["GET"])
+def desimalxy():
+    a, b, error = ambil_argumen()
+    if error:
+        return jsonify(error=error), 400
+    if b == 0:
+        return jsonify(error=@), 400
+    return jsonify(hasil="a / b")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
