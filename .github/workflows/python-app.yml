@@ -51,11 +51,17 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v5.0.0
         with:
           args: >
-            -Dsonar.organization=Arwwwnbl09
-            -Dsonar.projectKey=Arwwwnbl09_CICD-MKPL-Kelompok6-SE0602
+            -Dsonar.organization=dimzkuy
+            -Dsonar.projectKey=dimzkuy-MKPL-Kelompok6-SE0602
             -Dsonar.sources=src/app
             -Dsonar.tests=src/tests
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.sourceEncoding=UTF-8
+# -Dsonar.organization=Arwwwnbl09
+# -Dsonar.projectKey=Arwwwnbl09_CICD-MKPL-Kelompok6-SE0602
+# -Dsonar.sources=src/app 
+# -Dsonar.tests=src/tests
+# -Dsonar.python.coverage.reportPaths=coverage.xml
+# -Dsonar.sourceEncoding=UTF-8
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
