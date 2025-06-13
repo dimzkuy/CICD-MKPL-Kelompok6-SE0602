@@ -52,7 +52,7 @@ jobs:
         with:
           args: >
             -Dsonar.organization=dimzkuy
-            -Dsonar.projectKey=dimzkuy-MKPL-Kelompok6-SE0602
+            -Dsonar.projectKey=dimzkuy_MKPL-Kelompok6-SE0602
             -Dsonar.sources=src/app
             -Dsonar.tests=src/tests
             -Dsonar.python.coverage.reportPaths=coverage.xml
