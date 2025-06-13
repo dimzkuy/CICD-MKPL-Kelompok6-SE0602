@@ -44,5 +44,15 @@ def bagi():
         return jsonify(error="Pembagian dengan nol tidak diperbolehkan"), 400
     return jsonify(hasil=a / b)
 
+@app.route("/desimal", methods=["GET"])
+def desimal():
+    a, b, error = ambil_argumen()
+    if error:
+        return jsonify(error=error), 400
+    if b == 0:
+        return jsonify(error="Pembagian dengan nol tidak diperbolehkan"), 400
+    return jsonify(hasil=a / b)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
