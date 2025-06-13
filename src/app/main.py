@@ -35,6 +35,13 @@ def kali():
         return jsonify(error=error), 400
     return jsonify(hasil=a * b)
 
+@app.route("/kali", methods=["GET"])
+def kali():
+    a, b, error = ambil_argumen()
+    if error:
+        return jsonify(error=error), 400
+    return jsonify(hasil=a * b)
+
 @app.route("/bagi", methods=["GET"])
 def bagi():
     a, b, error = ambil_argumen()
